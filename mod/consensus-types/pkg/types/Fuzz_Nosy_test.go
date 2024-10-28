@@ -4811,6 +4811,9 @@ func Fuzz_Nosy_Validator_DefineSSZ__(f *testing.F) {
 			return
 		}
 
+		if effectiveBalanceIncrement == 0 {
+			return
+		}
 		v := NewValidatorFromDeposit(pubkey, withdrawalCredentials, amount, effectiveBalanceIncrement, maxEffectiveBalance)
 		v.DefineSSZ(codec)
 	})
@@ -4887,6 +4890,9 @@ func Fuzz_Nosy_Validator_GetEffectiveBalance__(f *testing.F) {
 			return
 		}
 
+		if effectiveBalanceIncrement == 0 {
+			return
+		}
 		v := NewValidatorFromDeposit(pubkey, withdrawalCredentials, amount, effectiveBalanceIncrement, maxEffectiveBalance)
 		v.GetEffectiveBalance()
 	})
@@ -4925,6 +4931,9 @@ func Fuzz_Nosy_Validator_GetPubkey__(f *testing.F) {
 			return
 		}
 
+		if effectiveBalanceIncrement == 0 {
+			return
+		}
 		v := NewValidatorFromDeposit(pubkey, withdrawalCredentials, amount, effectiveBalanceIncrement, maxEffectiveBalance)
 		v.GetPubkey()
 	})
@@ -4963,6 +4972,9 @@ func Fuzz_Nosy_Validator_GetTree__(f *testing.F) {
 			return
 		}
 
+		if effectiveBalanceIncrement == 0 {
+			return
+		}
 		v := NewValidatorFromDeposit(pubkey, withdrawalCredentials, amount, effectiveBalanceIncrement, maxEffectiveBalance)
 		v.GetTree()
 	})
@@ -5001,6 +5013,9 @@ func Fuzz_Nosy_Validator_HashTreeRoot__(f *testing.F) {
 			return
 		}
 
+		if effectiveBalanceIncrement == 0 {
+			return
+		}
 		v := NewValidatorFromDeposit(pubkey, withdrawalCredentials, amount, effectiveBalanceIncrement, maxEffectiveBalance)
 		v.HashTreeRoot()
 	})
@@ -5041,6 +5056,9 @@ func Fuzz_Nosy_Validator_MarshalSSZ__(f *testing.F) {
 			return
 		}
 
+		if effectiveBalanceIncrement == 0 {
+			return
+		}
 		v := NewValidatorFromDeposit(pubkey, withdrawalCredentials, amount, effectiveBalanceIncrement, maxEffectiveBalance)
 		v.MarshalSSZ()
 	})
@@ -5084,6 +5102,9 @@ func Fuzz_Nosy_Validator_MarshalSSZTo__(f *testing.F) {
 			return
 		}
 
+		if effectiveBalanceIncrement == 0 {
+			return
+		}
 		v := NewValidatorFromDeposit(pubkey, withdrawalCredentials, amount, effectiveBalanceIncrement, maxEffectiveBalance)
 		v.MarshalSSZTo(dst)
 	})
@@ -5190,6 +5211,9 @@ func Fuzz_Nosy_Validator_SetEffectiveBalance__(f *testing.F) {
 			return
 		}
 
+		if effectiveBalanceIncrement == 0 {
+			return
+		}
 		v := NewValidatorFromDeposit(pubkey, withdrawalCredentials, amount, effectiveBalanceIncrement, maxEffectiveBalance)
 		v.SetEffectiveBalance(balance)
 	})
@@ -5271,6 +5295,9 @@ func Fuzz_Nosy_Validator_UnmarshalSSZ__(f *testing.F) {
 			return
 		}
 
+		if effectiveBalanceIncrement == 0 {
+			return
+		}
 		v := NewValidatorFromDeposit(pubkey, withdrawalCredentials, amount, effectiveBalanceIncrement, maxEffectiveBalance)
 		v.UnmarshalSSZ(buf)
 	})
@@ -5419,6 +5446,9 @@ func Fuzz_Nosy_Validator_GetWithdrawableEpoch__(f *testing.F) {
 			return
 		}
 
+		if effectiveBalanceIncrement == 0 {
+			return
+		}
 		v := NewValidatorFromDeposit(pubkey, withdrawalCredentials, amount, effectiveBalanceIncrement, maxEffectiveBalance)
 		v.GetWithdrawableEpoch()
 	})
@@ -5457,6 +5487,9 @@ func Fuzz_Nosy_Validator_GetWithdrawalCredentials__(f *testing.F) {
 			return
 		}
 
+		if effectiveBalanceIncrement == 0 {
+			return
+		}
 		v := NewValidatorFromDeposit(pubkey, withdrawalCredentials, amount, effectiveBalanceIncrement, maxEffectiveBalance)
 		v.GetWithdrawalCredentials()
 	})
@@ -5495,6 +5528,9 @@ func Fuzz_Nosy_Validator_HasEth1WithdrawalCredentials__(f *testing.F) {
 			return
 		}
 
+		if effectiveBalanceIncrement == 0 {
+			return
+		}
 		v := NewValidatorFromDeposit(pubkey, withdrawalCredentials, amount, effectiveBalanceIncrement, maxEffectiveBalance)
 		v.HasEth1WithdrawalCredentials()
 	})
@@ -5581,6 +5617,9 @@ func Fuzz_Nosy_Validator_IsActive__(f *testing.F) {
 			return
 		}
 
+		if effectiveBalanceIncrement == 0 {
+			return
+		}
 		v := NewValidatorFromDeposit(pubkey, withdrawalCredentials, amount, effectiveBalanceIncrement, maxEffectiveBalance)
 		v.IsActive(epoch)
 	})
@@ -5624,6 +5663,9 @@ func Fuzz_Nosy_Validator_IsEligibleForActivation__(f *testing.F) {
 			return
 		}
 
+		if effectiveBalanceIncrement == 0 {
+			return
+		}
 		v := NewValidatorFromDeposit(pubkey, withdrawalCredentials, amount, effectiveBalanceIncrement, maxEffectiveBalance)
 		v.IsEligibleForActivation(finalizedEpoch)
 	})
@@ -5715,6 +5757,9 @@ func Fuzz_Nosy_Validator_IsFullyWithdrawable__(f *testing.F) {
 			return
 		}
 
+		if effectiveBalanceIncrement == 0 {
+			return
+		}
 		v := NewValidatorFromDeposit(pubkey, withdrawalCredentials, amount, effectiveBalanceIncrement, maxEffectiveBalance)
 		v.IsFullyWithdrawable(balance, epoch)
 	})
@@ -5806,6 +5851,9 @@ func Fuzz_Nosy_Validator_IsSlashable__(f *testing.F) {
 			return
 		}
 
+		if effectiveBalanceIncrement == 0 {
+			return
+		}
 		v := NewValidatorFromDeposit(pubkey, withdrawalCredentials, amount, effectiveBalanceIncrement, maxEffectiveBalance)
 		v.IsSlashable(epoch)
 	})
@@ -5844,6 +5892,9 @@ func Fuzz_Nosy_Validator_IsSlashed__(f *testing.F) {
 			return
 		}
 
+		if effectiveBalanceIncrement == 0 {
+			return
+		}
 		v := NewValidatorFromDeposit(pubkey, withdrawalCredentials, amount, effectiveBalanceIncrement, maxEffectiveBalance)
 		v.IsSlashed()
 	})
