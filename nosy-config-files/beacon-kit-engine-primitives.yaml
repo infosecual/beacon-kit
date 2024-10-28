@@ -1,0 +1,17 @@
+---
+ target_repo_name: beacon-kit
+ target_repo_url: https://github.com/infosecual/beacon-kit
+ target_repo_import_prefix: github.com/berachain/beacon-kit
+ target_sub_dir: /mod/engine-primitives
+ target_mod_self_declaration: github.com/berachain/beacon-kit
+ target_repo_branch: nosy
+ # use "go" for latest
+ go_version: go
+ harness_gen_deps:
+    - go get golang.org/x/tools
+ ignore_packages:
+ ignore_functions:
+ ignore_types:
+ substitute_packages:
+ seconds_per_target_function: 120
+
